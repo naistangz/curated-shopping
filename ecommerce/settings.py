@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'djmoney',
     'store',
     'basket',
+    'fontawesome-free',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'store.context_processors.add_variable_to_context',
+                'basket.context_processors.basket',
                 # 'store.views.CategoryView',  # access the view globally
             ],
         },
