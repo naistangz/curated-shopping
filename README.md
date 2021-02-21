@@ -1,6 +1,6 @@
 # E Commerce Store
 
-**Work in progress**
+**Work in progress** 🤙🏼
 
 ## Main functionality
 
