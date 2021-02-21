@@ -1,0 +1,58 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Curated for you{% endblock %}
+
+{% block content %} 
+
+
+<section class="py-5 text-center container">
+    <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="h1 fw-bold">test</h1>
+        <p class="lead text-muted">test short something</p>
+        <p>
+            <a href="#" class="btn btn-primary my-2">Make an account</a>
+        </p>
+    </div>
+</section>
+
+<div class="pb-3 h5 text-center">Curated Products</div>
+
+{% for product in products %}
+<div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        {% if product.image %}
+                        <img class="card-img-top text-center" src="{{ product.image.url }}" data-holder-rendered="true">
+                        {% endif %}
+                        <div class="card-body">
+                            
+                        <h5>{{ product.product_name }}</h5>
+                        <p class="card-text">
+                            <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.description }}</a>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Purchase Button</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">something here</small>
+                        </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>  
+
+
+
+
+                            
+
+{% endblock %}
