@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djmoney',
     'store',
+    'basket',
 ]
 
 MIDDLEWARE = [
