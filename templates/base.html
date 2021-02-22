@@ -55,8 +55,18 @@
                 </form>
             </div>
             <a type="button" role="button" href="{% url "basket:basket_summary" %}" class="btn btn-outline-secondary">
-                <div id="purchase_count" class="d-inline-flex">Count</div>
+                {% with total=basket|length %}
+                <div id="purchase_count" class="d-inline-flex">
+                    {% if total > 0 %}
+                        {{ total }}
+                    {% else %}
+                        0
+                    {% endif %}
+                </div>
+                {% endwith %}
+                
                 <i class="fas fa-shopping-basket"></i>
+                Basket
             </a>
         </div>
     </nav>

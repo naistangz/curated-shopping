@@ -55,6 +55,8 @@
                 action: 'post'
             },
             success: function(json){
+                console.log(json)
+                $('#purchase_count').html(json.qty) 
 
             },
             error: function(xhr, errmsg, err){
